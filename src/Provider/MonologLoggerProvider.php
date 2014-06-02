@@ -13,6 +13,7 @@ class MonologLoggerProvider implements ProviderInterface
     {
         $log = new Logger('monolog');
         $log->pushHandler(new StreamHandler($this->logDir.'/debug.log', Logger::DEBUG));
+//        $log->debug('MonologLoggerProvider: new Logger()');
         
         return $log;
     }
