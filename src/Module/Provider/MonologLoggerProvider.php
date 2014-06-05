@@ -1,5 +1,5 @@
 <?php
-namespace Koriym\Work\Provider;
+namespace Koriym\Work\Module\Provider;
 
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;

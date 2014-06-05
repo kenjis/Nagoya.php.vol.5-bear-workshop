@@ -34,7 +34,7 @@ class AppModule extends AbstractModule
     {
         $this->install(new StandardPackageModule('Koriym\Work', $this->context, dirname(dirname(__DIR__))));
 
-        $this->bind('Psr\Log\LoggerInterface')->toProvider('Koriym\Work\Provider\MonologLoggerProvider')->in(Scope::SINGLETON);
+        $this->bind('Psr\Log\LoggerInterface')->toProvider('Koriym\Work\Module\Provider\MonologLoggerProvider')->in(Scope::SINGLETON);
 
         $this->bindInterceptor($this->matcher->any(), $this->matcher->annotatedWith('Koriym\Work\Annotation\Benchmark'), [$this->requestInjection('Koriym\Work\Interceptor\BenchMarker')]);
 
